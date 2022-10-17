@@ -13,12 +13,15 @@ final class MyIntegrationTest: XCTestCase {
     
     func testingWeatherModel() async throws {
         
+        // given
         let weatherService = WeatherServiceImpl()
         
-        
+        //when
         let temperature = try await weatherService.getTemperature()
         
-        XCTAssertEqual(temperature, 65)
+        
+        //then
+        XCTAssertEqual(temperature, 63)
         
     }
 }
